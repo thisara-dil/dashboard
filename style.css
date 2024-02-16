@@ -48,7 +48,8 @@ body{
     border-bottom-left-radius: 30px;
 }
 
-.navigation ul li:hover{
+.navigation ul li:hover
+.navigation ul li:hovered{
     background: var(--white);
 }
 
@@ -66,7 +67,8 @@ body{
     color: var(--white);
 }
 
-.navigation ul li:hover a{
+.navigation ul li:hover a
+.navigation ul li:hovered a{
     color: var(--purple);
 }
 
@@ -94,7 +96,8 @@ body{
 }
 
 /*cursor outside*/
-.navigation ul li:hover a::before{
+.navigation ul li:hover a::before
+.navigation ul li:hovered a::before{
     content: '';
     position: absolute;
     right: 0;
@@ -106,8 +109,8 @@ body{
     box-shadow: 35px 35px 0 10px var(--white);
     pointer-events: none;
 }
-
-.navigation ul li:hover a::after{
+.navigation ul li:hover a::after,
+.navigation ul li:hovered a::after{
     content: '';
     position: absolute;
     right: 0;
@@ -118,4 +121,33 @@ body{
     border-radius: 50%;
     box-shadow: 35px -35px 0 10px var(--white);
     pointer-events: none;
+}
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
 }
