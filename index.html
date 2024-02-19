@@ -96,6 +96,16 @@
                 </div>
             </div>
         </div>
+
+        <!--chart-->
+        <div class="graphBox">
+            
+            <div class="box">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="box"></div>
+        </div>
+
          <!--complaint list-->
          <div class="details">
             <div class="Complaints">
@@ -134,10 +144,9 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        <!--New Users-->
+            <!--New Users-->
         <div class="newUsers">
-            <div class="Verify">
+            
                 <div class="cardheader">
                     <h2>New Users</h2>
                     <a href="#" class="btn">View All</a>
@@ -154,30 +163,32 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Complaint 1</td>
+                            <td>Nipun</td>
                             <td>12:00</td>
                             <td><span class="status Accept">Accept</span></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Complaint 2</td>
+                            <td>Akila</td>
                             <td>11:00</td>
                             <td><span class="status Pending">Pending</span></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Complaint 3</td>
+                            <td>Madusha</td>
                             <td>02:00</td>
-                            <td><span class="status Assists">Assists</span></td>
+                            <td><span class="status Denied">Denied</span></td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            
+        </div>
         </div>
     </div>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     //menu toggle
     let toggle = document.querySelector('.toggle');
@@ -187,6 +198,7 @@
         navigation.classList.toggle('active');
         main.classList.toggle('active');
     }
+   
     //add hovered class in selected listitem
     let list =document.querySelectorAll('.navigation li');
     function activelink(){
